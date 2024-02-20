@@ -1,12 +1,10 @@
 import React from "react";
-import photo from "../../assets/리플레이.png";
-import Image from "next/image";
 
 export default function Re_play() {
   return (
     <div className=" bg-green-200 flex flex-col gap-[20px]">
       {" "}
-      <Image src={photo} alt="리플레이" width={400} height={900} />
+      <img src="/리플레이.png" alt="리플레이" width={400} height={900} />
       <div className="">
         <h2 className="text-[30px] ">리플레이</h2>
         <strong className="text-blue-500">
@@ -18,30 +16,28 @@ export default function Re_play() {
       </div>
       <div className="bg-orange-200 flex flex-col gap-[10px]">
         <h3 className="text-[30px] ">구현한기능</h3>
+        <h4 className="text-[20px] ">
+          1.로그인유저에게 게임에 대한 평가를 남길수 있는 CRUD제공
+        </h4>
         <p>
-          - 디테일페이지 구현 사이트의 게임을 이용하고 그에 대한 후기를 유저들이
-          남길수 있는 기능제공 로그인한 유저만 별점과 해당 게임에 대한 후기를
-          남길수 있다.{" "}
-        </p>
+          main화면에서 게임CARD클릭시 detail페이지로 넘어가면 해당 게임에 대한
+          가벼운 설명과 게임에 대한 평가를 남길수 있는 CRUD 제공 , 로그인한
+          유저만 이용가능하고 자신이 쓴 게시글에 대한 update와 delete가 가능하게
+          구현
+        </p>{" "}
+        <h4 className="text-[20px] ">2.틱택토게임</h4>
         <p>
-          자신이 작성한 후기에 대해서만 수정 삭제가 가능하도록 구현 기능 구현을
-          위해 firebase와 useQuery를 사용 - 메인페이지에 좋아요 기능 구현
-          사이트에서 여러가지 게임을 제공하고 있다.{" "}
-        </p>
+          2명의 유저가 이용하는 게임으로 O와 X를 번갈아 가며 한번씩 9개의 빈칸에
+          작성하여 가로세로 대각선준 한줄의 빙고를 만들면 우승하는 게임 /
+          즉각적인 랜더링을 위해서는 useState 랜더링없이 데이터의 저장을 위한
+          useRef훅을 가장많이 이용하여 게임구현
+        </p>{" "}
+        <h4 className="text-[20px] ">3.메모리카드게임(포켓몬스터)</h4>
         <p>
-          그중에서 어떤 게임이 인기가 많은 게임을 알수 있도록 각 게임 POST별로
-          좋아요를 부여했다. firebase 와 useQuery를 사용 - 메모리게임 동일한
-          그림을 가진 카드 두장씩 8쌍인 총 16장의 카드가 있다.
-        </p>
-        <p>
-          {" "}
-          뒷면인 상태의 16장의 카드를 2개씩 뒤집어서 같은 쌍을 찾아내는 게임구현
-          useState , useEffect 등 리액트훅을 사용하여 게임구현 - 틱택토게임
-          2인용 게임으로 번갈아 가며 O와X 를 그려나가며 동일한 표시로 한줄을
-          먼저 채우는 사람이 승리하는 게임 useState , useRef 등 리액트훅을
-          사용하여 게임구현
-        </p>
-        <p></p>
+          똑같은 그림이 그려진 두장의 카드 8쌍 총 16개의 카드를 뒤집어 놓고
+          두개씩 뒤집으며 같은 그림의 1쌍을 찾아내는 게임 / useState ,
+          useEffect의 사용과 state변화에 따른 CSS변화를 중점으로 게임구현
+        </p>{" "}
       </div>
     </div>
   );

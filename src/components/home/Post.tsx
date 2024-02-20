@@ -65,17 +65,56 @@ export default function Post() {
       <p>좋은 말씀 부탁드립니다.</p>
       <section className="bg-yellow-100 w-[90vw] h-[30vh] font-bold flex flex-col items-center justify-end">
         {posts?.map((post) => {
-          return <p key={post.id}>{post.content}</p>;
+          let colorcolor;
+          if (post.createdAt) {
+            switch (Math.floor((post.createdAt % 10000) / 1000)) {
+              case 1:
+                colorcolor = "#FF0000";
+                break;
+              case 2:
+                colorcolor = "#FF5E00";
+                break;
+              case 3:
+                colorcolor = "#ABF200";
+                break;
+              case 4:
+                colorcolor = "#00D8FF";
+                break;
+              case 5:
+                colorcolor = "#1DDB16";
+                break;
+              case 6:
+                colorcolor = "#0100FF";
+                break;
+              case 7:
+                colorcolor = "#5F00FF";
+                break;
+              case 8:
+                colorcolor = "#FF36FF";
+                break;
+              case 9:
+                colorcolor = "#993800";
+                break;
+              case 0:
+                colorcolor = "#747474";
+                break;
+            }
+          }
+          return (
+            <p style={{ color: colorcolor }} key={post.id}>
+              {post.content}
+            </p>
+          );
         })}
       </section>
-      <section>
+      <section className="flex justify-center">
         <textarea
           value={text}
           onChange={(e) => onChangeHandler(e)}
           maxLength={60}
           style={{ resize: "none", width: "90%" }}
         ></textarea>
-        <button onClick={onClickHandeler} className="bg-purple-300">
+        <button onClick={onClickHandeler} className="bg-purple-300 w-[50px]">
           게시
         </button>
       </section>

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css");
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +17,8 @@
 }
 
 body {
+  font-size: 50;
+  font-family: sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -29,5 +31,11 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  html {
+    font-family: "AppleSDGothicNeo", "Noto Sans KR", sans-serif;
   }
 }

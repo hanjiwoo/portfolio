@@ -32,7 +32,7 @@ export default function Projects() {
           onClick={(e) => MoveToDetail(e)}
           id="1"
         >
-          <Image src={replay} width={200} alt="리플레이" />
+          <img src="/리플레이.png" width={200} alt="리플레이" />
           리플레이
         </p>
         <p
@@ -41,7 +41,7 @@ export default function Projects() {
           onClick={(e) => MoveToDetail(e)}
           id="2"
         >
-          <Image src={moeum} width={200} alt="모음" />
+          <img src="/moeum.png" width={200} alt="모음" />
           모음
         </p>
       </section>
