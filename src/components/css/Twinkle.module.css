@@ -1,0 +1,40 @@
+.main {
+  color: blue;
+  position: relative;
+}
+.card {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.1s ease;
+  transform: perspective(350px);
+  background: radial-gradient();
+  background-image: url("../../../public/나의스아진.jpg");
+  background-position: center;
+  background-size: cover;
+  position: center;
+}
+.card img {
+  width: inherit;
+}
+.overlay {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    yellow 45%,
+    orange 50%,
+    transparent 55%
+  );
+  filter: brightness(1.1) opacity(0.4);
+  mix-blend-mode: color-dodge;
+  /* background-size: 150% 150%; */
+  background-position: center;
+  /* opacity: calc(0.9); */
+}
+
+/* .card:hover {
+  transform: rotateY(20deg) rotateX(15deg);
+} */

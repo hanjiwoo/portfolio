@@ -18,6 +18,9 @@ export default function Header() {
       <Link href="/canvas">
         <HeaderBtn text="그림판" color="red" />
       </Link>
+      <Link href="/css">
+        <HeaderBtn text="CSS" color="#6b3464" />
+      </Link>
     </div>
   );
 }
