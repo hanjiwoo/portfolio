@@ -2,12 +2,13 @@
 import Link from "next/link";
 import React from "react";
 import HeaderBtn from "../home/HeaderBtn";
+import HomeBtn from "../home/HomeBtn";
 
 export default function Header() {
   return (
     <div className="bg-white flex  items-center h-[100px] gap-5">
       <Link href="/">
-        <HeaderBtn text="홈버튼" color="#FF6C6C" />
+        <HomeBtn />
       </Link>
       <Link href="/hanjiwoo">
         <HeaderBtn text="한지우소개" color="#716CFF" />
@@ -20,6 +21,9 @@ export default function Header() {
       </Link>
       <Link href="/css">
         <HeaderBtn text="CSS" color="#6b3464" />
+      </Link>
+      <Link href="/piano">
+        <HeaderBtn text="피아노" color="#ff20c7" />
       </Link>
     </div>
   );
